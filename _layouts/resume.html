@@ -1,22 +1,25 @@
----
-layout: default
-title: Resume
----
-
-<link href="assets/css/resume_screen.css" type="text/css" rel="stylesheet" media="screen">
-<link href="assets/css/resume_print.css" type="text/css" rel="stylesheet" media="print">
+<!doctype html>
+<html>
+{% include head.html %}
 
 <body>
-    <div id="main">
-        <div id="content">
-            <h1> Jose Manuel<br>Del Valle Delgado</h1>
-            <div id="webaddress">
-                {% for item in site.data.settings.social %}
-                <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}"
-                        aria-hidden="true"></i></a>
-                {% endfor %}
+    <div class="container">
+        <div class="content-wrapper">
+            <div id="content">
+                <link href="assets/css/resume_screen.css" type="text/css" rel="stylesheet" media="screen">
+                <link href="assets/css/resume_print.css" type="text/css" rel="stylesheet" media="print">
+                <h1> Jose Manuel<br>Del Valle Delgado</h1>
+                <div id="webaddress">
+                    {% for item in site.data.settings.social %}
+                    <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}"
+                            aria-hidden="true"></i></a>
+                    {% endfor %}
+                </div>
+                {{content}}
             </div>
-            {{content}}
         </div>
+        {% include footer.html %}
     </div>
 </body>
+
+</html>
