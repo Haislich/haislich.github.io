@@ -1,0 +1,65 @@
+I"<p class="lead">In order to use dactl’s post images with overlays you’ll need to learn how to set them. You do that in post’s YAML frontmatter and I’ll show you how.</p>
+
+<h2 id="yaml-front-matter">YAML Front matter</h2>
+<p>Each Jekyll post starts with YAML Front <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. For example, this is how this post would look like if I wanted to use all of the options:
+&lt;!–-break-–&gt;</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">How</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">I</span><span class="nv"> </span><span class="s">write</span><span class="nv"> </span><span class="s">posts</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">dactl</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">theme?'</span>
+<span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll</span>
+  <span class="pi">-</span> <span class="s">dactl</span>
+<span class="na">hero</span><span class="pi">:</span> <span class="s">/assets/hero.jpg</span>
+<span class="na">overlay</span><span class="pi">:</span> <span class="s">purple</span>
+<span class="na">link</span><span class="pi">:</span> <span class="s">https://link-to-some-page.com</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>As you can see it has a couple of options, some of them are required by Jekyll (layout, title), some are required by dactl theme when set to default hero layout (hero) and some are completely optional (overlay, link).<br />
+I’ll go through what each option means, what it affects and how to use it.</p>
+
+<h3 id="layout">Layout</h3>
+<p>This just tells Jekyll to use post layout.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>layout: post
+</code></pre></div></div>
+
+<h3 id="title">Title</h3>
+<p>Title of the post as seen at the top of this post.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">How</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">I</span><span class="nv"> </span><span class="s">write</span><span class="nv"> </span><span class="s">posts</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">dactl</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">theme?'</span>
+</code></pre></div></div>
+
+<h3 id="tags">Tags</h3>
+<p>This is how you assign multiple tags to a post.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll</span>
+  <span class="pi">-</span> <span class="s">dactl</span>
+</code></pre></div></div>
+
+<h3 id="hero-image">Hero image</h3>
+<p>See that nice picture from unsplash at the top of this page? This is how you set it’s source.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hero</span><span class="pi">:</span> <span class="s">/assets/hero.jpg</span>
+</code></pre></div></div>
+
+<h3 id="hero-overlay">Hero overlay</h3>
+<p>You can choose the color of the image overlay here.
+Currently you can choose from five colors: purple, red, green, blue, orange.
+If you don’t choose a color it will default to a light black.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">overlay</span><span class="pi">:</span> <span class="s">purple</span>
+</code></pre></div></div>
+
+<h3 id="link-post">Link post</h3>
+<p>I’ve included link post functionality (a’la <a href="http://daringfireball.net/">Daring Fireball</a>) in dactl.<br />
+If you put webpage’s address in that field then that post becomes a link post.<br />
+Title of that post (on blog page only) becomes a link to the webpage you set the address to. To access the content of the post you need to click on ‘Read more’ link. To access a link post content in layout with titles only you need to click a meta link which shows up between date and tags.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">link</span><span class="pi">:</span> <span class="s">https://link-to-some-page.com</span>
+</code></pre></div></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Everything in between those two <code class="language-plaintext highlighter-rouge">---</code> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

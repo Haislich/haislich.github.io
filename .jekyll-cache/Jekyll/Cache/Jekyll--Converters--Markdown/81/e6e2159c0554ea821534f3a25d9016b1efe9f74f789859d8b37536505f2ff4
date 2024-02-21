@@ -1,0 +1,21 @@
+I"N	<p class="lead">By default, dactl’s blog layout displays post excerpts which are leading paragraphs as well. This requires some manual work on your part when writing a post but don’t worry - it’s really easy. Read on for more info.</p>
+
+<h2 id="post-excerpts">Post excerpts</h2>
+<p>First, let’s see how this and the above paragraph looks like in markdown:
+&lt;!–-break-–&gt;</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>By default, dactl's blog layout displays post excerpts which are leading paragraphs as well. This requires some manual work on your part when writing a post but don't worry - it's really easy. Read on for more info.
+{: .lead}
+
+<span class="gu">## Post excerpts</span>
+First, let's see how this and the above paragraph looks like in markdown:
+<span class="nt">&lt;</span><span class="err">!–</span><span class="na">-break-</span><span class="err">–</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>As you can see above there are two things which are visible only in the post’s markdown version. You won’t see them here because they got processed by Jekyll and ‘thrown out’ while generating html version of this post.</p>
+
+<p><code class="language-plaintext highlighter-rouge">{: .lead}</code> inserted on a new line after a paragraphtells Jekyll’s markdown processor (dactl uses <a href="https://kramdown.gettalong.org/">kramdown</a>) to add class <code class="language-plaintext highlighter-rouge">.lead</code> to the above <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> tag which results in a leading paragraph.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;!--break--&gt;</code>, inserted on a new line after <code class="language-plaintext highlighter-rouge">{: .lead}</code>, tells Jekyll that it should <a href="https://media.giphy.com/media/l46CxpYSFoFtN11ug/giphy.gif">‘break’</a> the post content at this point, so everything above it will become a post excerpt.</p>
+
+<p class="notice-alert">The order is important here - <code class="language-plaintext highlighter-rouge">&lt;!--break--&gt;</code> comes <strong>after</strong> <code class="language-plaintext highlighter-rouge">{: .lead}</code> and because of that the leading paragraph/ post excerpt has it’s font enlarged both on blog and post pages.</p>
+:ET

@@ -1,0 +1,89 @@
+I"�%<p class="lead">All of the dactl’s configurations has to be set in <code class="language-plaintext highlighter-rouge">_config.yml</code> file. Read on for explanation of all of the features that you can toggle, including configuring the layout.</p>
+
+<p>I’ve split dactl’s <code class="language-plaintext highlighter-rouge">_config.yml</code> into two parts. First part should be configured by you, second contains important Jekyll &amp; build settings and you should leave it alone, unless you know what you are doing.
+&lt;!–-break-–&gt;</p>
+
+<p>Let’s go through each line in the first, configurable part:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Base blog settings</span>
+<span class="na">blog</span><span class="pi">:</span>
+  <span class="na">title                      </span><span class="pi">:</span> <span class="s">dactl</span>
+  <span class="na">description                </span><span class="pi">:</span> <span class="pi">&gt;</span>
+                               <span class="s">this should contain a proper description</span>
+<span class="c1"># Layout configuration</span>
+  <span class="na">logo_path                  </span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/dactl.svg"</span> <span class="c1"># path to logo file</span>
+  <span class="na">search_path                </span><span class="pi">:</span> <span class="c1"># "yourgitusername.github.io"</span>
+                               <span class="c1"># needed for searchbox in archive page</span>
+  <span class="na">hero_layout                </span><span class="pi">:</span> <span class="kc">true</span> <span class="c1"># turn on hero layout for blog and posts</span>
+  <span class="na">hero_placeholder           </span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/generic_hero.jpg"</span> <span class="c1"># placeholder for hero</span>
+  <span class="na">excerpts                   </span><span class="pi">:</span> <span class="kc">true</span> <span class="c1"># show excerpts instead of full post content on blog page</span>
+  <span class="na">inline_footnotes           </span><span class="pi">:</span> <span class="kc">true</span> <span class="c1"># enable/disable barefoot inline footnotes</span>
+  <span class="na">titles_only                </span><span class="pi">:</span> <span class="kc">false</span> <span class="c1"># titles only on main blog page</span>
+
+<span class="c1"># Fonts</span>
+<span class="na">font                         </span><span class="pi">:</span> <span class="s1">'</span><span class="s">"Rubik",</span><span class="nv"> </span><span class="s">-apple-system,</span><span class="nv"> </span><span class="s">BlinkMacSystemFont,</span><span class="nv"> </span><span class="s">"Helvetica</span><span class="nv"> </span><span class="s">Neue",</span><span class="nv"> </span><span class="s">sans-serif'</span>
+<span class="na">load_google_fonts            </span><span class="pi">:</span> <span class="s1">'</span><span class="s">Rubik:400,400italic,700,700italic'</span>
+
+<span class="c1"># Author info</span>
+<span class="na">author</span><span class="pi">:</span>
+  <span class="na">fullname                  </span><span class="pi">:</span> <span class="s">Your Name</span>
+  <span class="na">rss                       </span><span class="pi">:</span> <span class="kc">true</span> <span class="c1"># generate RSS feed and show it's icon in header</span>
+  <span class="na">mail                      </span><span class="pi">:</span> <span class="s">your@email.com</span> <span class="c1"># change to your e-mail address</span>
+  <span class="na">twitter                   </span><span class="pi">:</span> <span class="s">twitter-user-name</span>
+  <span class="na">github                    </span><span class="pi">:</span> <span class="s">github-user-name</span>
+  <span class="na">youtube                   </span><span class="pi">:</span> <span class="s">youtube-user-name</span>
+  <span class="na">stackoverflow             </span><span class="pi">:</span> <span class="s">stackoverflow-user-name</span>
+  <span class="na">disqus                    </span><span class="pi">:</span> <span class="s">dactl</span> <span class="c1"># your disqus site name</span>
+  <span class="na">google_analytics          </span><span class="pi">:</span> <span class="c1"># 'UA-XXXXXXXX-X'</span>
+  <span class="na">photo                     </span><span class="pi">:</span> <span class="s2">"</span><span class="s">uploads/me2.png"</span>
+  <span class="na">photo2x                   </span><span class="pi">:</span> <span class="s2">"</span><span class="s">uploads/me.png"</span>
+
+<span class="na">baseurl                      </span><span class="pi">:</span> <span class="s2">"</span><span class="s">/dactl/"</span> <span class="c1"># the subpath of your site, e.g. /blog/, set to '' in case of hosting on GitHub pages</span>
+                                  <span class="c1"># i.e. `http://&lt;username&gt;.github.io`</span>
+<span class="na">url                          </span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+</code></pre></div></div>
+
+<h2 id="base-blog-settings">Base blog settings</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">title</code> - title of your blog, both in <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> tag and in the header.</li>
+  <li><code class="language-plaintext highlighter-rouge">description</code> - descriptionof your blog, shown in the footer</li>
+</ul>
+
+<h2 id="layout-settings">Layout settings</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">logo_path</code> - Path to an .svg image used as logo</li>
+  <li><code class="language-plaintext highlighter-rouge">search_path</code> - Path to your blog, needed for the DuckDuckGo’s searchbar found in Archive page.</li>
+  <li><code class="language-plaintext highlighter-rouge">hero_layout</code> - true / false - Turn the hero image layout on or off. When turned off you don’t need to supply images and overlays in post’s YAML front matter and the layout gets slightly adjusted.</li>
+  <li><code class="language-plaintext highlighter-rouge">hero_placeholder</code> - Path to an image which will be used as a placeholder when there is no hero set for post, optional.</li>
+  <li><code class="language-plaintext highlighter-rouge">excerpts</code> - true or false - Turn post excerpts on or off. When set to <code class="language-plaintext highlighter-rouge">false</code> you will see full text content for each post on blog page.</li>
+  <li><code class="language-plaintext highlighter-rouge">inline_footnotes</code> - true or false - When set to <code class="language-plaintext highlighter-rouge">false</code> you will turn off Barefoot.js inline footnotes.</li>
+  <li><code class="language-plaintext highlighter-rouge">titles_only</code> - true or false - When set to true Jekyll will generate blog layout with post titles only. <code class="language-plaintext highlighter-rouge">hero_layout</code> and <code class="language-plaintext highlighter-rouge">excerpts</code> are overidden by <code class="language-plaintext highlighter-rouge">titles_only</code> when it’s set to <code class="language-plaintext highlighter-rouge">true</code>.</li>
+</ul>
+
+<h2 id="fonts">Fonts</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">font</code> - Name of the font family used for theme’s typography.</li>
+  <li><code class="language-plaintext highlighter-rouge">load_google_fonts</code> - Choose what font family should be loaded, served by <a href="https://fonts.google.com">google fonts</a>.
+In order to change the font you need to supply it’s name and variants - font weight of 400 and 700 are required.</li>
+</ul>
+
+<h2 id="author-info">Author info</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fullname</code> - Your name and surname or nick, used throughout the blog.</li>
+  <li><code class="language-plaintext highlighter-rouge">rss</code> - true or false - Turn the RSS feeds on or off.</li>
+  <li><code class="language-plaintext highlighter-rouge">mail</code> - Your e-mail address.</li>
+  <li><code class="language-plaintext highlighter-rouge">twitter</code> - Your twitter username</li>
+  <li><code class="language-plaintext highlighter-rouge">github</code> - Your Github username</li>
+  <li><code class="language-plaintext highlighter-rouge">youtube</code> - Your YouTube username</li>
+  <li><code class="language-plaintext highlighter-rouge">stackoverflow</code> - Your Stackoverflow username</li>
+  <li><code class="language-plaintext highlighter-rouge">disqus</code> - Your Disqus site name.</li>
+  <li><code class="language-plaintext highlighter-rouge">photo</code> - Avatar or photo of you, used on About page.</li>
+  <li><code class="language-plaintext highlighter-rouge">photo2x</code> - Same as above but in higher resolution.</li>
+</ul>
+
+<h2 id="google-analytics">Google Analytics</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">google_analytics</code> - Supply your Google Analytics ID here, if you want to use it.</li>
+  <li><code class="language-plaintext highlighter-rouge">baseurl</code> - Subpath of your blog, e.g. <code class="language-plaintext highlighter-rouge">/blog</code>, leave it empty in case of hosting on Github pages - <code class="language-plaintext highlighter-rouge">yourusername.github.io</code></li>
+</ul>
+:ET

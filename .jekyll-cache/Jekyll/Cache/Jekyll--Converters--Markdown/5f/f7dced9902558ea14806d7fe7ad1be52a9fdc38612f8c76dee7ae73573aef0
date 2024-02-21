@@ -1,0 +1,56 @@
+I"<p class="lead">By default dactl has a couple of special classes which will turn a paragraph into a notice block when added to it. Read on for information on how to use it.</p>
+
+<h2 id="how-to-create-a-notice-block">How to create a notice block</h2>
+<p>Creating notices from your paragraphs works the same way as creating <a href="LINKILYNKI">leading post paragraphs</a>.<br />
+You need to add a correct class <strong>after</strong> the paragraph:
+&lt;!–-break-–&gt;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sea otters [hold each other’s paws](https://www.youtube.com/watch?v=eTvX-CkfqRo) when they sleep so they don’t drift apart.  
+That is a fact, look it up on Wikipedia if you don't believe me.
+{: .notice}
+</code></pre></div></div>
+
+<h2 id="available-options">Available options</h2>
+<h3 id="regular-notice-block">Regular notice block</h3>
+<p><code class="language-plaintext highlighter-rouge">{: .notice}</code></p>
+
+<p class="notice">Sea otters <a href="https://www.youtube.com/watch?v=eTvX-CkfqRo">hold each other’s paws</a> when they sleep so they don’t drift apart.<br />
+That is a fact, look it up on Wikipedia if you don’t believe me.</p>
+
+<h3 id="alert-notice-block">Alert notice block</h3>
+<p><code class="language-plaintext highlighter-rouge">{: .notice-alert}</code></p>
+
+<p class="notice-alert">If one examines the capitalist paradigm of context, one is faced with a
+choice: either accept textual narrative or conclude that reality serves to
+exploit the Other.</p>
+
+<h3 id="success-notice-block">Success notice block</h3>
+<p><code class="language-plaintext highlighter-rouge">{: .notice-success}</code></p>
+
+<p class="notice-success">If one examines the capitalist paradigm of context, one is faced with a
+choice: either accept textual narrative or conclude that reality serves to
+exploit the Other.</p>
+
+<h2 id="multi-paragraph-notice-blocks">Multi-paragraph notice blocks</h2>
+<p>The easiest solution I found to wrapping more than paragraph into a notice is just inserting it into a markdown-enabled <code class="language-plaintext highlighter-rouge">div</code> tag, like this:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notice"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+If one examines the capitalist paradigm of context, one is faced with a
+choice: either accept textual narrative or conclude that reality serves to
+exploit the Other.
+
+A number of dematerialisms concerning textual objectivism
+exist. However, if textual narrative holds, we have to choose between
+precultural theory and the conceptual paradigm of consensus.
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Which, when processed by kramdown, shows up like this:</p>
+<div class="notice">
+  <p>If one examines the capitalist paradigm of context, one is faced with a
+choice: either accept textual narrative or conclude that reality serves to
+exploit the Other.</p>
+
+  <p>A number of dematerialisms concerning textual objectivism
+exist. However, if textual narrative holds, we have to choose between
+precultural theory and the conceptual paradigm of consensus.</p>
+</div>
+:ET
