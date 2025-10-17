@@ -1,9 +1,23 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
   - title: "About"
     url: /about/
+  - title: "Posts"
+    url: /posts/
+  - title: "Master Thesis"
+    url: /master-thesis/motivation
+  # - title: "Categories"
+  #   url: /categories/
+  # - title: "Tags"
+  #   url: /tags/
+
+master-thesis:
+  - title: Introduction
+    children:
+      - title: "Motivation"
+        url: /master-thesis/motivation
+      - title: "Problem statement"
+        url: /master-thesis/problem-statement
+  - title: Papers
+    children:
+      - title: "Myocontrolled neuroprosmaster-thesis integrated with a passive esoskeleton to support upper limb activities"
+        url: /master-thesis/ambrosini-et-al
