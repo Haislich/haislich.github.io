@@ -24,7 +24,7 @@ github_username: haislich
 minimal_mistakes_skin: dark
 search: true
 locale: "en-US"
-
+# baseurl: "/about"
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes

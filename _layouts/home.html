@@ -2,10 +2,19 @@
 layout: archive
 ---
 
+<!-- for mathjax support -->
+{% if page.usemathjax %}
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+      </script>
+<script type="text/javascript" async
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
+
+
 {{ content }}
-
-<link rel="icon" href={{site.avatar}}>
-
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
