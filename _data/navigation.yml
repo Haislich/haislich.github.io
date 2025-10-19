@@ -3,8 +3,8 @@ main:
     url: /about
   - title: "Posts"
     url: /posts/
-  - title: "Master Thesis"
-    url: /master-thesis/motivation
+  # - title: "Master Thesis"
+  #   url: /master-thesis/motivation
   # - title: "Categories"
   #   url: /categories/
   # - title: "Tags"
