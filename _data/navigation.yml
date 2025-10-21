@@ -21,3 +21,7 @@ master-thesis:
     children:
       - title: "Myocontrolled neuroprosmaster-thesis integrated with a passive esoskeleton to support upper limb activities"
         url: /master-thesis/ambrosini-et-al
+  - title: Ideas
+    children:
+      - title: "Next steps"
+        url: /master-thesis/next-steps
